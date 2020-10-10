@@ -1,11 +1,15 @@
 import React from 'react';
 import './App.css';
 import { HomePage } from './page/home';
-import {Switch ,Route} from "react-router-dom";
+import { AnalyticsPage } from './page/analytics';
+import { CalendarPage } from './page/calendar';
+import { EquipmentPage } from './page/equipment';
+import { CheckinCheckoutPage } from './page/checkin_checkout';
+import { AlertsPage } from './page/alerts';
+import {Switch, Route} from "react-router-dom";
 import { Sidebar } from './components/sidebar';
 import Navbar from './components/navbar';
 import { MyColleagues } from './page/mycolleagues';
-import { CalenderPage } from './page/calender';
 
 function App() {
   return (
@@ -13,16 +17,14 @@ function App() {
       <Sidebar /> 
       <Navbar/>
       <Switch>
-          <Route exact path="/">
-            <HomePage />
-          </Route>
-          <Route exact path="/colleagues">
-            <MyColleagues />
-          </Route>
-          <Route exact path="/calendar">
-            <CalenderPage/>
-          </Route>
-        </Switch>
+        <Route exact path="/" component={HomePage} />
+        <Route path="/analytics" component={AnalyticsPage} />
+        <Route path="/my-reservations" component={CalendarPage} />
+        <Route path="/equipment" component={EquipmentPage} />
+        <Route path="/checkin-checkout" component={CheckinCheckoutPage} />
+        <Route path="/alerts" component={AlertsPage} />
+        <Route path="/colleagues" component={MyColleagues} />
+      </Switch>
     </div>
   );
 }

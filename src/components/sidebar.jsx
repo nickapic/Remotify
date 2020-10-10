@@ -8,10 +8,10 @@ export const Sidebar = () => {
             <Link to="/" href="#">
                 <i className="fas fa-house-user sidebar-logo"></i>
             </Link>
-            <Link to="/" href="#">
+            <Link to="/alerts" href="#">
                 <i className="fas fa-exclamation-triangle sidebar-logo"></i>
             </Link>
-            <Link to="/" href="#">
+            <Link to="/equipment" href="#">
                 <i className="far fa-hdd sidebar-logo"></i>
             </Link>
             <Link to="/" href="#">

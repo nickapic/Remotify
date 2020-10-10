@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { Menu } from 'antd';
-import { MailOutlined, AppstoreOutlined, SettingOutlined } from '@ant-design/icons';
+import { MailOutlined } from '@ant-design/icons';
 import { Category } from '../components/categorymenu';
 export const MyColleagues = () => {
     const [current, setCurrent] = useState("followers");
