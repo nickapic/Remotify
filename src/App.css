@@ -159,3 +159,32 @@ button {
 .legend_svg {
   margin-left: 2rem;
 }
+.profile {
+  margin: 2rem 0rem;
+  margin-left: 2rem;
+  width: 30rem;
+  padding: 1rem 0.5rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  background-color: #003655;
+}
+.profile_name,
+.profile_para {
+  color: white;
+  margin: 0rem;
+  padding: 4px 1rem;
+}
+.profile_name {
+  font-weight: 700;
+}
+.profile-button {
+  color: black;
+  border: none;
+  background-color: white;
+  cursor: pointer;
+  padding: 5px 10px;
+  margin-right: 1rem;
+}
