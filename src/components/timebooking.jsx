@@ -156,7 +156,7 @@ export class TimeBooking extends React.Component {
                         </Row>
                         {
                             this.state.repeat &&
-                            <div>
+                            <div className="repeat-section">
                                 <Row>
                                     <Col span={12}>
                                         <div>Start Date</div>
@@ -184,12 +184,12 @@ export class TimeBooking extends React.Component {
                                     {
                                         this.state.repetitionInterval === "Weekly" &&
                                         <Col span={12}>
-                                            Every
+                                            <div className="pretty-line-left">Every</div>
                                             <Select value={this.state.repetitionWeekly} defaultValue={this.state.repetitionWeekly} onChange={this.onRepetitionWeekly}>
                                                 <Option value="1">1</Option>
                                                 <Option value="2">2</Option>
                                             </Select>
-                                        week(s) on
+                                            <div className="pretty-line-right">week(s) on</div>
                                         </Col>
                                     }
                                 </Row>
