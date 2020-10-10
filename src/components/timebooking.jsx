@@ -8,23 +8,24 @@ import { ReactComponent as MapSVG } from "../map.svg";
 import { ModalPop } from './modal_toinvite';
 import { SmileOutlined } from '@ant-design/icons';
 import '../css/timebooking.css';
+import { Link } from "react-router-dom";
 
 const menu = (
     <Menu>
       <Menu.Item>
-        <a target="_blank" rel="noopener noreferrer" >
+        <Link to="/" target="_blank" rel="noopener noreferrer">
           Uniq
-        </a>
+        </Link>
       </Menu.Item>
       <Menu.Item>
-        <a target="_blank" rel="noopener noreferrer" >
+            <Link to="/" target="_blank" rel="noopener noreferrer" >
           DC PIER
-        </a>
+        </Link>
       </Menu.Item>
       <Menu.Item>
-        <a target="_blank" rel="noopener noreferrer">
+            <Link to="/" target="_blank" rel="noopener noreferrer">
           DC Valley
-        </a>
+        </Link>
       </Menu.Item>
     </Menu>
 );
@@ -32,19 +33,19 @@ const menu = (
 const floors = (
     <Menu>
         <Menu.Item>
-            <a target="_blank" rel="noopener noreferrer" >
+            <Link to="/" target="_blank" rel="noopener noreferrer" >
                 1
-        </a>
+        </Link>
         </Menu.Item>
         <Menu.Item>
-            <a target="_blank" rel="noopener noreferrer" >
+            <Link to="/" target="_blank" rel="noopener noreferrer" >
                 2
-        </a>
+        </Link>
         </Menu.Item>
         <Menu.Item>
-            <a target="_blank" rel="noopener noreferrer">
+            <Link to="/" target="_blank" rel="noopener noreferrer">
                 3
-        </a>
+        </Link>
         </Menu.Item>
     </Menu>
 );
