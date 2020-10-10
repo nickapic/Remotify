@@ -1,9 +1,10 @@
 import React from 'react'
+import { TimeBooking } from './timebooking'
 
 export const Dashboard = () => {
     return (
-        <div>
-            
+        <div className="dashboard">
+            <TimeBooking/>
         </div>
     )
 }
