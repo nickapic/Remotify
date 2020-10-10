@@ -171,24 +171,21 @@ export class TimeBooking extends React.Component {
                     </div>
                 </div>
                 <div className="time-booker-left">
+                   <div className="text-headline">Where would you like to Book?</div>
                    <div className="time-booker-left_dropdowns">
                    <Select defaultValue="Uniq">
                         <Option value="Uniq">Uniq</Option>
                         <Option value="Weekly">DC Pier</Option>
                         <Option value="Monthly">DC Valley</Option>
-                    </Select>  
-                    <Select defaultValue="Daily">
-                        <Option value="Daily">Daily</Option>
-                        <Option value="Weekly">Weekly</Option>
-                        <Option value="Monthly">Monthly</Option>
                     </Select>
                    </div>
                     <MapSVG width="120%" height="auto" />
                     <div className="checkboxes-section">
                         <Checkbox> Invite My Team</Checkbox>
                         <ModalPop />
+                        <Button type="primary" onClick={openNotification}>Reserve Place</Button>
                     </div>
-                    <Button type="primary" onClick={openNotification}>Reserve Place</Button>
+                    
                 </div>
             </div>
         )
