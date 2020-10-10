@@ -20,6 +20,9 @@ export const Category = () => {
                 <li className="category-menu_list-item">
                     <Link to="/analytics">Analytics</Link> 
                 </li>
+                <li className="category-menu_list-item">
+                    <Link to="/updates">Updates</Link> 
+                </li>
             </ul>
         </div>
     )
