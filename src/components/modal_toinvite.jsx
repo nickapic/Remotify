@@ -18,7 +18,7 @@ const [visible, setvisible] = useState(false)
     return (
         <div>
         <Button type="primary" onClick={showModal}>
-          Open Modal
+          Invite People
         </Button>
         <Modal
           title="Basic Modal"

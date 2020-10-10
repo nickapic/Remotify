@@ -117,9 +117,13 @@
 .btn {
   margin-right: 2rem;
 }
-
+button {
+}
 .checkboxes-section {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
   margin: 2rem 0rem;
 }
