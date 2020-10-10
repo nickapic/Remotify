@@ -1,4 +1,22 @@
+.repeat-section {
+    margin-right: 15px;
+}
+
 .repeat-section > * {
     margin-top: 10px;
     font-weight: bold;
+}
+
+.ant-checkbox-wrapper + .ant-checkbox-wrapper {
+    margin-left: 0px;
+}
+
+.pretty-line-left {
+    display: inline-block;
+    margin-right: 5px;
+}
+
+.pretty-line-right {
+    display: inline-block;
+    margin-left: 5px;
 }
