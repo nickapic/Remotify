@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import "../componentcss/category.css"
+
 export const Category = () => {
     return (
         <div className="category-menu">

@@ -1,7 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap");
 .App {
   font-family: "Poppins", sans-serif;
-  margin-left: 4vw;
+  overflow-x: hidden;
+  margin-left: 4rem;
 }
 .sidebar {
   position: fixed;
@@ -32,13 +33,14 @@
   margin-left: 2rem;
   display: flex;
   flex-direction: column;
-  height: 80vh;
+  height: 70vh;
 }
 .text-headline {
   font-size: 1.3rem;
   font-weight: 700;
   text-transform: uppercase;
 }
+
 .header {
   display: flex;
   padding: 2rem 2rem;
@@ -50,11 +52,47 @@
 }
 .logo-text {
   text-transform: uppercase;
-  font-size: 1.4rem;
+  font-size: 1.7rem;
   text-decoration: none;
   font-weight: 700;
   color: black;
 }
 .navbar {
   margin-right: 2rem;
+}
+
+.category-menu {
+  margin: 2rem 0;
+  height: 2rem;
+  width: auto;
+  display: flex;
+}
+.category-menu_list {
+  display: flex;
+  padding-left: 0rem;
+  margin-left: 0rem;
+  flex-direction: row;
+  list-style: none;
+}
+.category-menu_list-item {
+  margin-left: 2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+}
+.category-menu_list a {
+  text-decoration: none;
+  color: #00101a;
+}
+
+.time-picker_section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex-wrap: none;
+  margin: 2rem 0rem;
+}
+.time-picker_label {
+  font-weight: 600;
+  text-transform: uppercase;
 }
