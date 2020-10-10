@@ -5,6 +5,7 @@ import {Switch ,Route} from "react-router-dom";
 import { Sidebar } from './components/sidebar';
 import Navbar from './components/navbar';
 import { MyColleagues } from './page/mycolleagues';
+import { CalenderPage } from './page/calender';
 
 function App() {
   return (
@@ -18,7 +19,9 @@ function App() {
           <Route exact path="/colleagues">
             <MyColleagues />
           </Route>
-
+          <Route exact path="/calendar">
+            <CalenderPage/>
+          </Route>
         </Switch>
     </div>
   );

@@ -146,7 +146,7 @@ export class TimeBooking extends React.Component {
                     </div>
                     <div className="calendar-section">
                         <label htmlFor="#" className="time-picker_label">Date</label>
-                        <Calendar fullscreen={false} className="calender" />
+                        <DatePicker style={{ width: '50%' }} />
                     </div>
                     <div className="repeat-section">
                         <Row>

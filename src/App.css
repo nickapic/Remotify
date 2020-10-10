@@ -140,3 +140,15 @@ button {
 .menu-item {
   margin-left: 0rem !important;
 }
+.calendar-section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.calender-mine {
+  display: flex;
+  margin-left: 2rem;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
