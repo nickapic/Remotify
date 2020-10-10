@@ -6,16 +6,16 @@ export const Category = () => {
         <div className="category-menu">
             <ul className="category-menu_list">
                 <li className="category-menu_list-item">
-                    <Link to="/calendar"> My Reservations </Link>
+                    <Link to="/my-reservations"> My Reservations </Link>
                 </li>
                 <li className="category-menu_list-item">
-                    <Link to="/">Equipment </Link> 
+                    <Link to="/equipment">Equipment </Link> 
                 </li>
                 <li className="category-menu_list-item">
-                    <Link to="/">Check Ins / Check Out</Link> 
+                    <Link to="/checkin-checkout">Check Ins / Check Out</Link> 
                 </li>
                 <li className="category-menu_list-item">
-                    <Link to="/">Analytics</Link> 
+                    <Link to="/analytics">Analytics</Link> 
                 </li>
             </ul>
         </div>
