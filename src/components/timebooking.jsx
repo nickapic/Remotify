@@ -29,7 +29,7 @@ export const TimeBooking = () => {
     const { RangePicker } = TimePicker;
     const format = 'HH:mm';
     return (
-        <div className="section_time">
+    <div className="section_time">
         <div className="time-booker">
             <div className="text-headline">What time would you like to Book?</div>
             <div className="time-picker_section">
@@ -40,12 +40,13 @@ export const TimeBooking = () => {
                 <label htmlFor="#" className="time-picker_label">Date</label>
                 <Calendar fullscreen={false} className="calender"/>
             </div>
-            <div className="time-booker-left">
-            <Dropdown overlay={menu} placement="bottomCenter">
-                <Button>bottomCenter</Button>
-            </Dropdown>
-            </div>
         </div>
-        </div> 
+        <div className="time-booker-left">
+            <Dropdown overlay={menu} placement="bottomCenter">
+                <Button>Select the Building </Button>
+            </Dropdown>
+        </div>
+    </div>
+       
     )
 }
