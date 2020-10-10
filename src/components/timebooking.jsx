@@ -2,28 +2,63 @@ import React from 'react'
 import { Calendar } from 'antd';
 import 'antd/dist/antd.css';
 import { TimePicker } from 'antd';
-import { Menu, Dropdown, Button, Checkbox, DatePicker, Row, Col, Select } from 'antd';
+import '../css/timebooking.css';
+import { Menu, Dropdown, Button, Checkbox, DatePicker, Row, Col, Select, notification } from 'antd';
+import { ReactComponent as MapSVG } from "../map.svg";
+import { ModalPop } from './modal_toinvite';
+import { SmileOutlined } from '@ant-design/icons';
 import '../css/timebooking.css';
 
 const menu = (
     <Menu>
       <Menu.Item>
-        <a target="_blank" rel="noopener noreferrer" href="http://www.alipay.com/">
+        <a href="#" target="_blank" rel="noopener noreferrer" >
           Uniq
         </a>
       </Menu.Item>
       <Menu.Item>
-        <a target="_blank" rel="noopener noreferrer" href="http://www.taobao.com/">
+        <a target="_blank" rel="noopener noreferrer" >
           DC PIER
         </a>
       </Menu.Item>
       <Menu.Item>
-        <a target="_blank" rel="noopener noreferrer" href="http://www.tmall.com/">
+        <a target="_blank" rel="noopener noreferrer">
           DC Valley
         </a>
       </Menu.Item>
     </Menu>
 );
+
+const floors = (
+    <Menu>
+        <Menu.Item>
+            <a target="_blank" rel="noopener noreferrer" >
+                1
+        </a>
+        </Menu.Item>
+        <Menu.Item>
+            <a target="_blank" rel="noopener noreferrer" >
+                2
+        </a>
+        </Menu.Item>
+        <Menu.Item>
+            <a target="_blank" rel="noopener noreferrer">
+                3
+        </a>
+        </Menu.Item>
+    </Menu>
+);
+
+const openNotification = () => {
+    const args = {
+        message: 'Your Booking has been Confirmed',
+        description:
+            'Booking for Working from home has been confirmed please Check In once you reach the workplace',
+        duration: 10,
+        icon: <SmileOutlined style={{ color: '#108ee9' }} />,
+    };
+    notification.open(args);
+};
 
 const { Option } = Select;
 const { RangePicker } = TimePicker;
@@ -54,19 +89,19 @@ export class TimeBooking extends React.Component {
         this.onFri = this.onFri.bind(this);
     }
 
-    onRepeat = function(e) {
+    onRepeat = function (e) {
         this.setState({
             repeat: e.target.checked
         });
     }
 
-    onRepetitionInterval = function(e) {
+    onRepetitionInterval = function (e) {
         this.setState({
             repetitionInterval: e
         });
     }
 
-    onRepetitionWeekly = function(e) {
+    onRepetitionWeekly = function (e) {
         this.setState({
             repetitionWeekly: e
         });
@@ -98,7 +133,7 @@ export class TimeBooking extends React.Component {
         });
     }
 
-    
+
     render() {
         return (
             <div className="section_time">
@@ -115,11 +150,11 @@ export class TimeBooking extends React.Component {
                     <div className="repeat-section">
                         <Row>
                             <Col span={24}>
-                                <Checkbox checked={ this.state.repeat } onChange={this.onRepeat}> Repeat </Checkbox>
+                                <Checkbox checked={this.state.repeat} onChange={this.onRepeat}> Repeat </Checkbox>
                             </Col>
                         </Row>
                         {
-                            this.state.repeat && 
+                            this.state.repeat &&
                             <div>
                                 <Row>
                                     <Col span={12}>
@@ -150,9 +185,9 @@ export class TimeBooking extends React.Component {
                                         <Col span={12}>
                                             Every
                                             <Select value={this.state.repetitionWeekly} defaultValue={this.state.repetitionWeekly} onChange={this.onRepetitionWeekly}>
-                                                    <Option value="1">1</Option>
-                                                    <Option value="2">2</Option>
-                                                </Select>
+                                                <Option value="1">1</Option>
+                                                <Option value="2">2</Option>
+                                            </Select>
                                         week(s) on
                                         </Col>
                                     }
@@ -171,17 +206,26 @@ export class TimeBooking extends React.Component {
                                     </Row>
                                 }
                             </div>
-                        
+
                         }
-                        
+
                     </div>
                 </div>
                 <div className="time-booker-left">
                     <Dropdown overlay={menu} placement="bottomCenter">
                         <Button>Select the Building </Button>
                     </Dropdown>
+                    <Dropdown overlay={floors} placement="bottomCenter" className="btn">
+                        <Button >Floor</Button>
+                    </Dropdown>
+                    <MapSVG width="120%" height="auto" />
+                    <div className="checkboxes-section">
+                        <Checkbox> Invite My Team</Checkbox>
+                        <ModalPop />
+                    </div>
+                    <Button type="primary" onClick={openNotification}>Reserve Place</Button>
                 </div>
             </div>
         )
     }
-}
+};
