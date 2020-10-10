@@ -12,7 +12,7 @@ import '../css/timebooking.css';
 const menu = (
     <Menu>
       <Menu.Item>
-        <a href="#" target="_blank" rel="noopener noreferrer" >
+        <a target="_blank" rel="noopener noreferrer" >
           Uniq
         </a>
       </Menu.Item>
