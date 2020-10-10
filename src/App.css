@@ -189,3 +189,35 @@ button {
   padding: 5px 10px;
   margin-right: 1rem;
 }
+.hero-page {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+}
+.hero-page_left {
+  margin-left: 2rem;
+  display: flex;
+  flex-direction: column;
+  height: 70vh;
+  justify-content: center;
+  align-items: flex-start;
+  width: 50%;
+}
+.hero-page_left-heading {
+  font-weight: 700;
+  font-size: 1.9rem;
+  width: 75%;
+  text-transform: uppercase;
+}
+.hero-page_left-paragraph {
+  width: 70%;
+}
+.hero-page_left a {
+  background-color: #003655;
+  padding: 10px 15px;
+  color: white;
+}
+.hero-page_right {
+  width: 45%;
+}
