@@ -1,54 +1,12 @@
 import React from 'react'
-import { Calendar } from 'antd';
 import 'antd/dist/antd.css';
 import { TimePicker } from 'antd';
 import '../css/timebooking.css';
-import { Menu, Dropdown, Button, Checkbox, DatePicker, Row, Col, Select, notification } from 'antd';
+import { Button, Checkbox, DatePicker, Row, Col, Select, notification } from 'antd';
 import { ReactComponent as MapSVG } from "../map.svg";
 import { ModalPop } from './modal_toinvite';
 import { SmileOutlined } from '@ant-design/icons';
 import '../css/timebooking.css';
-import { Link } from "react-router-dom";
-
-const menu = (
-    <Menu>
-      <Menu.Item>
-        <Link to="/" target="_blank" rel="noopener noreferrer">
-          Uniq
-        </Link>
-      </Menu.Item>
-      <Menu.Item>
-            <Link to="/" target="_blank" rel="noopener noreferrer" >
-          DC PIER
-        </Link>
-      </Menu.Item>
-      <Menu.Item>
-            <Link to="/" target="_blank" rel="noopener noreferrer">
-          DC Valley
-        </Link>
-      </Menu.Item>
-    </Menu>
-);
-
-const floors = (
-    <Menu>
-        <Menu.Item>
-            <Link to="/" target="_blank" rel="noopener noreferrer" >
-                1
-        </Link>
-        </Menu.Item>
-        <Menu.Item>
-            <Link to="/" target="_blank" rel="noopener noreferrer" >
-                2
-        </Link>
-        </Menu.Item>
-        <Menu.Item>
-            <Link to="/" target="_blank" rel="noopener noreferrer">
-                3
-        </Link>
-        </Menu.Item>
-    </Menu>
-);
 
 const openNotification = () => {
     const args = {
