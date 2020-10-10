@@ -4,6 +4,9 @@ import { TimePicker } from 'antd';
 import '../css/timebooking.css';
 import { Button, Checkbox, DatePicker, Row, Col, Select, notification } from 'antd';
 import { ReactComponent as MapSVG } from "../map.svg";
+import { ReactComponent as AnotherSVG } from "../another_building.svg";
+import { ReactComponent as SelectSVG } from "../select_place.svg";
+import { ReactComponent as ReservedSVG } from "../reserved.svg";
 import { ModalPop } from './modal_toinvite';
 import { SmileOutlined } from '@ant-design/icons';
 import '../css/timebooking.css';
@@ -35,7 +38,10 @@ export class TimeBooking extends React.Component {
             onWed: false,
             onThu: false,
             onFri: false,
-            repeat: true
+            repeat: true,
+            select: false,
+            reserve: false,
+            building: "Uniq"
         }
 
         this.onRepeat = this.onRepeat.bind(this);
@@ -46,6 +52,9 @@ export class TimeBooking extends React.Component {
         this.onWed = this.onWed.bind(this);
         this.onThu = this.onThu.bind(this);
         this.onFri = this.onFri.bind(this);
+        this.select = this.select.bind(this);
+        this.reserve = this.reserve.bind(this);
+        this.onBuilding = this.onBuilding.bind(this);
     }
 
     onRepeat = function (e) {
@@ -92,6 +101,25 @@ export class TimeBooking extends React.Component {
         });
     }
 
+    select = function () {
+        this.setState({
+            select: true
+        });
+    }
+
+    reserve = function () {
+        this.setState({
+            select: false,
+            reserve: true
+        });
+    }
+
+    onBuilding = function (e) {
+        this.setState({
+            building: e,
+            select: false
+        });
+    }
 
     render() {
         return (
@@ -173,17 +201,35 @@ export class TimeBooking extends React.Component {
                 <div className="time-booker-left">
                    <div className="text-headline">Where would you like to Book?</div>
                    <div className="time-booker-left_dropdowns">
-                   <Select defaultValue="Uniq">
+                        <Select defaultValue={this.state.building} onChange={ this.onBuilding }>
                         <Option value="Uniq">Uniq</Option>
-                        <Option value="Weekly">DC Pier</Option>
-                        <Option value="Monthly">DC Valley</Option>
+                        <Option value="DC Pier">DC Pier</Option>
+                        <Option value="DC Valley">DC Valley</Option>
                     </Select>
-                   </div>
-                    <MapSVG width="120%" height="auto" />
+                    </div>
+                    {
+                        this.state.select
+                            ?
+                            <SelectSVG width="120%" height="auto" />
+                            :
+                            (
+                                this.state.building === "DC Pier"
+                                    ?
+                                    <AnotherSVG width="120%" height="auto" />
+                                    :
+                                    (
+                                        this.state.reserve
+                                            ?
+                                            <ReservedSVG width="120%" height="auto" />
+                                            :
+                                            <MapSVG onClick={this.select} width="120%" height="auto" />
+                                    )
+                            )
+                    }
                     <div className="checkboxes-section">
                         <Checkbox> Invite My Team</Checkbox>
                         <ModalPop />
-                        <Button type="primary" onClick={openNotification}>Reserve Place</Button>
+                        <Button type="primary" onClick={() => { openNotification(); this.reserve() }}>Reserve Place</Button>
                     </div>
                     
                 </div>
