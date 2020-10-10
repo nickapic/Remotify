@@ -9,6 +9,7 @@ import { AlertsPage } from './page/alerts';
 import {Switch, Route} from "react-router-dom";
 import { Sidebar } from './components/sidebar';
 import Navbar from './components/navbar';
+import { MyColleagues } from './page/mycolleagues';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
         <Route path="/equipment" component={EquipmentPage} />
         <Route path="/checkin-checkout" component={CheckinCheckoutPage} />
         <Route path="/alerts" component={AlertsPage} />
+        <Route path="/colleagues" component={MyColleagues} />
       </Switch>
     </div>
   );

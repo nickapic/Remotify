@@ -146,7 +146,7 @@ export class TimeBooking extends React.Component {
                     </div>
                     <div className="calendar-section">
                         <label htmlFor="#" className="time-picker_label">Date</label>
-                        <Calendar fullscreen={false} className="calender" />
+                        <DatePicker style={{ width: '50%' }} />
                     </div>
                     <div className="repeat-section">
                         <Row>
@@ -213,12 +213,18 @@ export class TimeBooking extends React.Component {
                     </div>
                 </div>
                 <div className="time-booker-left">
-                    <Dropdown overlay={menu} placement="bottomCenter">
-                        <Button>Select the Building </Button>
-                    </Dropdown>
-                    <Dropdown overlay={floors} placement="bottomCenter" className="btn">
-                        <Button >Floor</Button>
-                    </Dropdown>
+                   <div className="time-booker-left_dropdowns">
+                   <Select defaultValue="Uniq">
+                        <Option value="Uniq">Uniq</Option>
+                        <Option value="Weekly">DC Pier</Option>
+                        <Option value="Monthly">DC Valley</Option>
+                    </Select>  
+                    <Select defaultValue="Daily">
+                        <Option value="Daily">Daily</Option>
+                        <Option value="Weekly">Weekly</Option>
+                        <Option value="Monthly">Monthly</Option>
+                    </Select>
+                   </div>
                     <MapSVG width="120%" height="auto" />
                     <div className="checkboxes-section">
                         <Checkbox> Invite My Team</Checkbox>

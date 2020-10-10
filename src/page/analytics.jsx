@@ -9,7 +9,6 @@ export class AnalyticsPage extends React.Component {
         return (
             <div>
                 <Category />
-                <div>ANALYTICS</div>
                 <img height="500px" width="800px" src={ stats} alt="stats" />
             </div>
         )

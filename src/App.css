@@ -34,7 +34,7 @@
   display: flex;
   flex-direction: column;
   width: 50%;
-  height: 70vh;
+  height: 80vh;
 }
 .text-headline {
   margin-top: 2rem;
@@ -126,4 +126,36 @@ button {
   justify-content: space-between;
   align-items: center;
   margin: 2rem 0rem;
+}
+.time-booker-left_dropdowns {
+  display: flex;
+  flex-direction: row;
+}
+.menu {
+  text-decoration: none;
+  border: none !important;
+  margin-left: 2rem !important;
+  padding-left: 0rem !important;
+}
+.menu-item {
+  margin-left: 0rem !important;
+}
+.calendar-section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.calender-mine {
+  display: flex;
+  margin-left: 2rem;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+.calender_svg {
+  height: 60vh;
+  width: auto;
+}
+.legend_svg {
+  margin-left: 2rem;
 }
