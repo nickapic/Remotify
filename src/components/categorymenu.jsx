@@ -9,13 +9,13 @@ export const Category = () => {
                     <Link to="/calendar"> My Reservations </Link>
                 </li>
                 <li className="category-menu_list-item">
-                    <Link>Equipment </Link> 
+                    <Link to="/">Equipment </Link> 
                 </li>
                 <li className="category-menu_list-item">
-                    <Link >Check Ins / Check Out</Link> 
+                    <Link to="/">Check Ins / Check Out</Link> 
                 </li>
                 <li className="category-menu_list-item">
-                    <Link>Analytics</Link> 
+                    <Link to="/">Analytics</Link> 
                 </li>
             </ul>
         </div>
