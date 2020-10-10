@@ -101,8 +101,25 @@
 }
 .time-booker-left {
   display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 .time-picker_label {
   font-weight: 600;
   text-transform: uppercase;
+}
+.location-dropmenu {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  margin: 2rem 0rem;
+}
+.btn {
+  margin-right: 2rem;
+}
+
+.checkboxes-section {
+  display: flex;
+  flex-direction: column;
+  margin: 2rem 0rem;
 }
