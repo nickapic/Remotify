@@ -150,5 +150,12 @@ button {
   margin-left: 2rem;
   flex-direction: row;
   justify-content: flex-start;
-  align-items: flex-start;
+  align-items: center;
+}
+.calender_svg {
+  height: 60vh;
+  width: auto;
+}
+.legend_svg {
+  margin-left: 2rem;
 }
