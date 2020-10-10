@@ -4,6 +4,7 @@ import { HomePage } from './page/home';
 import {Switch ,Route} from "react-router-dom";
 import { Sidebar } from './components/sidebar';
 import Navbar from './components/navbar';
+import { MyColleagues } from './page/mycolleagues';
 
 function App() {
   return (
@@ -11,9 +12,13 @@ function App() {
       <Sidebar /> 
       <Navbar/>
       <Switch>
-          <Route path="/">
+          <Route exact path="/">
             <HomePage />
           </Route>
+          <Route exact path="/colleagues">
+            <MyColleagues />
+          </Route>
+
         </Switch>
     </div>
   );
