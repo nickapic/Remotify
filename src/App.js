@@ -10,7 +10,7 @@ import {Switch, Route} from "react-router-dom";
 import { Sidebar } from './components/sidebar';
 import Navbar from './components/navbar';
 import { MyColleagues } from './page/mycolleagues';
-import {Updates } from './page/updates'
+import {UpdatePage } from './page/updatePage'
 import { HeroPage } from './page/HeroPage';
 
 function App() {
@@ -27,7 +27,7 @@ function App() {
         <Route path="/checkin-checkout" component={CheckinCheckoutPage} />
         <Route path="/alerts" component={AlertsPage} />
         <Route path="/colleagues" component={MyColleagues} />
-        <Route exact path="/updates" component={Updates} />
+        <Route exact path="/updates" component={UpdatePage} />
       </Switch>
     </div>
   );

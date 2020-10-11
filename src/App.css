@@ -238,3 +238,40 @@ button {
 .hero-page_right {
   width: 45%;
 }
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-between;
+  width: 60vw;
+  margin: 1rem 2rem;
+  background-color: #003655;
+  color: white;
+  padding: 1rem 2rem;
+}
+.card-text-content h1 {
+  color: white;
+  font-weight: 700;
+  font-size: 1rem;
+}
+.card-button {
+  align-self: flex-end;
+}
+
+.card-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.updates-card {
+  margin-left: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 80vw;
+}
+.join-plan {
+  margin-left: 3rem;
+}
