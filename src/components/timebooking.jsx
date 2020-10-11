@@ -43,7 +43,6 @@ export class TimeBooking extends React.Component {
             reserve: false,
             building: "DC Pier"
         }
-
         this.onRepeat = this.onRepeat.bind(this);
         this.onRepetitionInterval = this.onRepetitionInterval.bind(this);
         this.onRepetitionWeekly = this.onRepetitionWeekly.bind(this);

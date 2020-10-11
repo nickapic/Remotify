@@ -26,7 +26,7 @@ const data = [
   },{
     title: 'Tadas',
     description: "IT Team Lead",
-    content: "Has Booked Workspace in DC Pier from 10-17 on everyday this week. Would you like to join and work with this colleague?"
+    content: "Has Booked Workspace in DC Pier from 10-15 on everyday this week. Would you like to join and work with this colleague?"
   },
 ];
 
