@@ -125,7 +125,7 @@ export class TimeBooking extends React.Component {
         return (
             <div className="section_time">
                 <div className="time-booker">
-                    <div className="text-headline">What time would you like to Book?</div>
+                    <div className="text-headline">TIME</div>
                     <div className="time-picker_section">
                         <label htmlFor="#" className="time-picker_label">Start Time : End Time</label>
                         <RangePicker format={format} />
@@ -198,15 +198,36 @@ export class TimeBooking extends React.Component {
 
                     </div>
                 </div>
-                <div className="time-booker-left">
-                   <div className="text-headline">Where would you like to Book?</div>
-                   <div className="time-booker-left_dropdowns">
-                        <Select defaultValue={this.state.building} onChange={ this.onBuilding }>
-                        <Option value="Uniq">Uniq</Option>
-                        <Option value="DC Pier">DC Pier</Option>
-                        <Option value="DC Valley">DC Valley</Option>
-                    </Select>
-                    </div>
+                <div className="time-booker-left repeat-section">
+                    <div className="text-headline">LOCATION</div>
+                    <div>
+                        <Row>
+                            <Col span={12}>
+                                <div>Building</div>
+                            </Col>
+                            <Col span={12}>
+                                <div>Space Type</div>
+                            </Col>
+                        </Row>
+                        <Row>
+                            <Col span={12}>
+                                <div>
+                                    <Select defaultValue={this.state.building} onChange={this.onBuilding}>
+                                        <Option value="Uniq">Uniq</Option>
+                                        <Option value="DC Pier">DC Pier</Option>
+                                        <Option value="DC Valley">DC Valley</Option>
+                                    </Select>
+                                </div>
+                            </Col>
+                            <Col span={12}>
+                                <Select defaultValue="Quiet">
+                                    <Option value="Quiet">Quiet</Option>
+                                    <Option value="Open">Openr</Option>
+                                    <Option value="Social">Social</Option>
+                                </Select>
+                            </Col>
+                            </Row>
+                        </div>
                     {
                         this.state.select
                             ?
