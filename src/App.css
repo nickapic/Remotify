@@ -160,3 +160,64 @@ button {
 .legend_svg {
   margin-left: 2rem;
 }
+.profile {
+  margin: 2rem 0rem;
+  margin-left: 2rem;
+  width: 30rem;
+  padding: 1rem 0.5rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  background-color: #003655;
+}
+.profile_name,
+.profile_para {
+  color: white;
+  margin: 0rem;
+  padding: 4px 1rem;
+}
+.profile_name {
+  font-weight: 700;
+}
+.profile-button {
+  color: black;
+  border: none;
+  background-color: white;
+  cursor: pointer;
+  padding: 5px 10px;
+  margin-right: 1rem;
+}
+.hero-page {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+}
+.hero-page_left {
+  margin-left: 2rem;
+  display: flex;
+  flex-direction: column;
+  height: 70vh;
+  justify-content: center;
+  align-items: flex-start;
+  width: 50%;
+}
+.hero-page_left-heading {
+  font-weight: 700;
+  font-size: 1.9rem;
+  width: 75%;
+  text-transform: uppercase;
+}
+.hero-page_left-paragraph {
+  width: 70%;
+}
+.hero-page_left a {
+  background-color: #003655;
+  padding: 10px 15px;
+  color: white;
+}
+.hero-page_right {
+  width: 45%;
+}
