@@ -41,7 +41,7 @@ export class TimeBooking extends React.Component {
             repeat: true,
             select: false,
             reserve: false,
-            building: "Uniq"
+            building: "DC Pier"
         }
 
         this.onRepeat = this.onRepeat.bind(this);

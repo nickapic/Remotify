@@ -1,3 +1,4 @@
+import { Button } from "antd";
 import React from "react";
 import { Link } from "react-router-dom";
 
@@ -15,7 +16,7 @@ export const Sidebar = () => {
                 <i className="far fa-hdd sidebar-logo"></i>
             </Link>
             <Link to="/" href="#">
-                <i className="fas fa-sign-out-alt sidebar-logo"></i>
+                <Button onClick="" className="fas fa-sign-out-alt sidebar-logo"></Button>
             </Link>
         </div>
     );
