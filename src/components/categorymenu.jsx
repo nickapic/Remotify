@@ -12,7 +12,7 @@ export const Category = () => {
                     <Link to="/equipment">My Equipment </Link> 
                 </li>
                 <li className="category-menu_list-item">
-                    <Link to="/checkin-checkout">New Booking</Link> 
+                    <Link to="/dashboard">New Booking</Link> 
                 </li>
                 <li className="category-menu_list-item">
                     <Link to="/colleagues">My Colleagues</Link> 
