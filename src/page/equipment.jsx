@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import { Category } from '../components/categorymenu'
 import 'antd/dist/antd.css';
 import { Button, Select, notification } from 'antd';
@@ -24,6 +24,9 @@ export class EquipmentPage extends React.Component {
 
     render() {
         return (
+            <Fragment>
+
+            <Category />
             <div className="time-booker">
                 <div className="text-headline">Take home equipment</div>
                 <label htmlFor="#" className="time-picker_label">Item</label>
@@ -58,7 +61,7 @@ export class EquipmentPage extends React.Component {
                 </div>
                 <Button style={{ width: 150 }} type="primary" onClick={() => { openNotification() }}>Check Out</Button>
             </div>
-            
+            </Fragment>
 
         )
     }

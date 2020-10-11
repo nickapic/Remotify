@@ -15,7 +15,7 @@ const openNotification = () => {
     const args = {
         message: 'Your Booking has been Confirmed',
         description:
-            'Booking for Working from home has been confirmed please Check In once you reach the workplace',
+            'Booking for Working from Office has been confirmed please Check In once you reach the workplace',
         duration: 10,
         icon: <SmileOutlined style={{ color: '#108ee9' }} />,
     };

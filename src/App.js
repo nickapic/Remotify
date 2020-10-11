@@ -12,8 +12,19 @@ import Navbar from './components/navbar';
 import { MyColleagues } from './page/mycolleagues';
 import {UpdatePage } from './page/updatePage'
 import { HeroPage } from './page/HeroPage';
+import { notification } from 'antd';
+import { SmileOutlined } from '@ant-design/icons';
 
+const openNotification = () => {
+  notification.open({
+    message: 'Your Colleague',
+    description:
+      'This is the content of the notification. This is the content of the notification. This is the content of the notification.',
+    icon: <SmileOutlined style={{ color: '#108ee9' }} />,
+  });
+};
 function App() {
+  setTimeout(function(){ openNotification(); }, 15000);
   return (
     <div className="App">
       <Sidebar /> 

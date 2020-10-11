@@ -1,4 +1,6 @@
-import { List, Avatar } from 'antd';
+import { List, Avatar , Button, notification} from 'antd';
+import { SmileOutlined } from '@ant-design/icons';
+
 import React from 'react'
 
 const data = [
@@ -21,10 +23,21 @@ const data = [
     title: 'Agota Suilokaite',
     description: "IT Specialist",
     content: "Has Booked Workspace in DC Pier for 2.5 hours on 16th October. Would you like to Join?"
+  },{
+    title: 'John Doe',
+    description: "IT Team Lead",
+    content: "Has Booked Workspace in DC Pier from 10-17 on everyday this week. Would you like to join and work with this colleague?"
   },
 ];
 
-
+const openNotification = () => {
+    notification.open({
+      message: 'Calendar Event has Been Added',
+      description:
+        "Your Meeting event has been added to your Calender you can check it out in the My Reservations section" ,
+      icon: <SmileOutlined style={{ color: '#108ee9' }} />,
+    });
+  };
 
 
 export const Update = () => {
@@ -43,7 +56,7 @@ export const Update = () => {
             />
             <p>{item.content}</p>
             <div className="btn-update">
-                <button className="join-plan">Join Plan</button>
+                <button className="join-plan" onClick={() => { openNotification();  }}>Join</button>
             </div>
             
           </List.Item>
