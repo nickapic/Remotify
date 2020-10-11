@@ -125,7 +125,7 @@ export class TimeBooking extends React.Component {
         return (
             <div className="section_time">
                 <div className="time-booker">
-                    <div className="text-headline">What time would you like to Book?</div>
+                    <div className="text-headline">TIME</div>
                     <div className="time-picker_section">
                         <label htmlFor="#" className="time-picker_label">Start Time : End Time</label>
                         <RangePicker format={format} />
@@ -198,34 +198,96 @@ export class TimeBooking extends React.Component {
 
                     </div>
                 </div>
-                <div className="time-booker-left">
-                   <div className="text-headline">Where would you like to Book?</div>
-                   <div className="time-booker-left_dropdowns">
-                        <Select defaultValue={this.state.building} onChange={ this.onBuilding }>
-                        <Option value="Uniq">Uniq</Option>
-                        <Option value="DC Pier">DC Pier</Option>
-                        <Option value="DC Valley">DC Valley</Option>
-                    </Select>
+                <div className="time-booker-left repeat-section">
+                    <div className="text-headline">LOCATION</div>
+                    <div className="time-booker-left-selections">
+                        <Row>
+                            <Col span={24}>
+                                <div>SEARCH BY</div>
+                            </Col>
+                        </Row>
+                        <Row>
+                            <Col span={12}>
+                                <div className="bigger-text">Building</div>
+                            </Col>
+                            <Col span={12}>
+                                <div className="bigger-text">Space Type</div>
+                            </Col>
+                        </Row>
+                        <Row>
+                            <Col span={12}>
+                                <div>
+                                    <Select defaultValue={this.state.building} onChange={this.onBuilding}>
+                                        <Option value="Uniq">Uniq</Option>
+                                        <Option value="DC Pier">DC Pier</Option>
+                                        <Option value="DC Valley">DC Valley</Option>
+                                    </Select>
+                                </div>
+                            </Col>
+                            <Col span={12}>
+                                <Select defaultValue="Quiet">
+                                    <Option value="Quiet">Quiet</Option>
+                                    <Option value="Open">Open</Option>
+                                    <Option value="Social">Social</Option>
+                                </Select>
+                            </Col>
+                        </Row>
+                        <Row>
+                            <Col span={12}>
+                                <div className="bigger-text">Amenities</div>
+                            </Col>
+                            <Col span={6}>
+                                <div className="bigger-text">Floor</div>
+                            </Col>
+                            <Col span={6}>
+                                <div className="bigger-text">Desk</div>
+                            </Col>
+                        </Row>
+                        <Row>
+                            <Col span={12}>
+                                <div>
+                                    <Checkbox> Monitors</Checkbox>
+                                    <Checkbox> Docking Station</Checkbox>
+                                    <Checkbox> Keyboard</Checkbox>
+                                </div>
+                            </Col>
+                            <Col span={6}>
+                                <Select defaultValue="Select">
+                                    <Option value="1">1</Option>
+                                    <Option value="2">2</Option>
+                                    <Option value="3">3</Option>
+                                </Select>
+                            </Col>
+                            <Col span={6}>
+                                <Select defaultValue="Select">
+                                    <Option value="3L">3L</Option>
+                                    <Option value="5R">5R</Option>
+                                    <Option value="3R">3R</Option>
+                                </Select>
+                            </Col>
+                        </Row>
                     </div>
-                    {
-                        this.state.select
-                            ?
-                            <SelectSVG width="120%" height="auto" />
-                            :
-                            (
-                                this.state.building === "DC Pier"
-                                    ?
-                                    <AnotherSVG width="120%" height="auto" />
-                                    :
-                                    (
-                                        this.state.reserve
-                                            ?
-                                            <ReservedSVG width="120%" height="auto" />
-                                            :
-                                            <MapSVG onClick={this.select} width="120%" height="auto" />
-                                    )
-                            )
-                    }
+                    <div className="floor-map-div">
+                        {
+                            this.state.select
+                                ?
+                                <SelectSVG width="120%" height="auto" />
+                                :
+                                (
+                                    (this.state.building === "DC Pier" || this.state.building === "DC Valley")
+                                        ?
+                                        <AnotherSVG width="120%" height="auto" />
+                                        :
+                                        (
+                                            this.state.reserve
+                                                ?
+                                                <ReservedSVG width="120%" height="auto" />
+                                                :
+                                                <MapSVG onClick={this.select} width="120%" height="auto" />
+                                        )
+                                )
+                        }
+                    </div>
                     <div className="checkboxes-section">
                         <Checkbox> Invite My Team</Checkbox>
                         <ModalPop />
