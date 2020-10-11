@@ -1,4 +1,4 @@
-import { List, Avatar , Button, notification} from 'antd';
+import { List, Avatar , notification} from 'antd';
 import { SmileOutlined } from '@ant-design/icons';
 
 import React from 'react'
