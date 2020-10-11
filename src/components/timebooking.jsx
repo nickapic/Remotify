@@ -3,7 +3,7 @@ import 'antd/dist/antd.css';
 import { TimePicker } from 'antd';
 import '../css/timebooking.css';
 import { Button, Checkbox, DatePicker, Row, Col, Select, notification } from 'antd';
-import { ReactComponent as MapSVG } from "../map.svg";
+import { ReactComponent as MapSVG } from "../first.svg";
 import { ReactComponent as AnotherSVG } from "../another_building.svg";
 import { ReactComponent as SelectSVG } from "../select_place.svg";
 import { ReactComponent as ReservedSVG } from "../reserved.svg";

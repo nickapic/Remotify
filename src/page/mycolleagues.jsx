@@ -3,7 +3,7 @@ import { Menu } from 'antd';
 import { MailOutlined } from '@ant-design/icons';
 import { Category } from '../components/categorymenu';
 import { Followers } from '../components/followers';
-import { Following } from '../components/following';
+
 export const MyColleagues = () => {
     const [current, setCurrent] = useState("Followers");
     const handleClick = e => {
