@@ -24,7 +24,7 @@ const openNotification = () => {
   });
 };
 function App() {
-  setTimeout(function(){ openNotification(); }, 15000);
+  setTimeout(function(){ openNotification(); }, 60000);
   return (
     <div className="App">
       <Sidebar /> 

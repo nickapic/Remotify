@@ -228,6 +228,7 @@
 }
 .hero-page_left-paragraph {
   width: 70%;
+  font-size: 1.2rem;
 }
 .hero-page_left a {
   background-color: #003655;
@@ -278,6 +279,7 @@
 }
 .updates-card {
   margin-left: 2rem;
+  margin-top: 3rem;
 }
 .join-plan {
   margin-left: 3rem;
